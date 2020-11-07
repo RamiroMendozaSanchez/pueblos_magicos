@@ -1,14 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:pueblos_magicos/screens/second_screen.dart';
 
-class FirstScreen extends StatefulWidget {
+class ThirdScreen extends StatefulWidget {
   @override
-  _FirstScreenState createState() => _FirstScreenState();
+  _ThirdScreenState createState() => _ThirdScreenState();
 }
 
-class _FirstScreenState extends State<FirstScreen> {
+class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +24,7 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
             Center(
               child: Align(
-                alignment: Alignment.centerRight,
+                alignment: Alignment.centerLeft,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30),
                   child: BackdropFilter(
@@ -35,14 +34,11 @@ class _FirstScreenState extends State<FirstScreen> {
                       child: FloatingActionButton(
                         backgroundColor: Color.fromRGBO(0, 0, 0, 0.3),
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => SecondScreen()),
-                          );
+                          Navigator.pop(context);
                         },
                         child: Container(
                           child: Icon(
-                            Icons.arrow_forward_rounded,
+                            Icons.arrow_back,
                             color: Colors.white,
                           ),
                         ),
@@ -61,39 +57,19 @@ class _FirstScreenState extends State<FirstScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          'assets/images/tlalpujahua.png',
-                          width: MediaQuery.of(context).size.width * 0.75,
-                        ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
                         Text(
-                          "El pueblo que se negó a morir",
+                          "El pueblo que se negó a morirssssssssssssssssssssssssssssssssfhssssssssssssss"
+                              "sdhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh "
+                              "sdhggggggggggggggggggggggggggggggggggggggggggj"
+                              "sdjfkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+                              "sdhfffffffffffffffffffffffffffffffffffffffffffffgfdj"
+                              "sdfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhj"
+                              "fshddddddddddddddddddddddddddddddddddddddddddddddddddd",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w800,
                             fontSize: 18,
                           ),
-                        ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.place,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              "Michoacán, México",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800,
-                                fontSize: 18,
-                              ),
-                            ),
-                          ],
                         ),
                       ],
                     ),
