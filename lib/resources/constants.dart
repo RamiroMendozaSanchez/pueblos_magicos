@@ -13,6 +13,7 @@ const cSubtitles = Color(0xFF5A5A5A);
 const cAssentRestorantsAndButtonVideo = Color(0xFFE50080);
 const cSelectedMenuLugares = Color(0xFFF3AD88);
 const cAssentHistory = Color(0xFFE54E22);
+const kShadowColor = Color.fromRGBO(72, 76, 82, 0.16);
 
 
 
