@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:pueblos_magicos/navigator.dart';
 
 class ThirdScreen extends StatefulWidget {
   @override
@@ -105,7 +106,12 @@ class _ThirdScreenState extends State<ThirdScreen> {
                               ),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => NavigationBar()),
+                            );
+                          },
                         ),
                       ),
                     ),
