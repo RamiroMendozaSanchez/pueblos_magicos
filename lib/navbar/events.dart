@@ -18,7 +18,7 @@ class _EventsScreenState extends State<EventsScreen> {
               Padding(
                 padding: EdgeInsets.only(top: 0.0),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * .5,
+                  height: MediaQuery.of(context).size.height * .4,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(50.0),
@@ -28,7 +28,7 @@ class _EventsScreenState extends State<EventsScreen> {
                   ),
                   constraints: BoxConstraints(
                     maxWidth: MediaQuery.of(context).size.width,
-                    maxHeight: 650,
+                    maxHeight: 400,
                   ),
                   child: Column(
                     children: [
@@ -69,7 +69,7 @@ class _EventsScreenState extends State<EventsScreen> {
               Padding(
                 padding: EdgeInsets.only(left: 30, top: 290, right: 30.0 ),
                 child: Container(
-                  width: 450.0,
+                  width: 480.0,
                   height: 80.0,
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -86,6 +86,7 @@ class _EventsScreenState extends State<EventsScreen> {
                           Column(
                             children: [
                               FlatButton(
+                                minWidth: 5.0,
                                 onPressed: (){},
                                 child: Container(
                                     //width: 35.0,
@@ -107,12 +108,12 @@ class _EventsScreenState extends State<EventsScreen> {
                           Column(
                             children: [
                               FlatButton(
+                                minWidth: 5.0,
                                 onPressed: (){},
                                 child: Container(
-                                  //width: 35.0,
                                   child: Column(
                                     children: [
-                                      Text("Ene"),
+                                      Text("Feb"),
                                       SizedBox(height: 10.0,),
                                       Icon(Icons.visibility)
                                     ],
@@ -128,12 +129,12 @@ class _EventsScreenState extends State<EventsScreen> {
                           Column(
                             children: [
                               FlatButton(
+                                minWidth: 5.0,
                                 onPressed: (){},
                                 child: Container(
-                                  //width: 35.0,
                                   child: Column(
                                     children: [
-                                      Text("Ene"),
+                                      Text("Mar"),
                                       SizedBox(height: 10.0,),
                                       Icon(Icons.visibility)
                                     ],
@@ -149,12 +150,182 @@ class _EventsScreenState extends State<EventsScreen> {
                           Column(
                             children: [
                               FlatButton(
+                                minWidth: 5.0,
+                                onPressed: (){},
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Text("Abr"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                minWidth: 5.0,
                                 onPressed: (){},
                                 child: Container(
                                   //width: 35.0,
                                   child: Column(
                                     children: [
-                                      Text("Ene"),
+                                      Text("May"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                minWidth: 5.0,
+                                onPressed: (){},
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Text("Jun"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                minWidth: 5.0,
+                                onPressed: (){},
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Text("Jul"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                minWidth: 5.0,
+                                onPressed: (){},
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Text("Ago"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                minWidth: 5.0,
+                                onPressed: (){},
+                                child: Container(
+                                  //width: 35.0,
+                                  child: Column(
+                                    children: [
+                                      Text("Sep"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                minWidth: 5.0,
+                                onPressed: (){},
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Text("Oct"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                minWidth: 5.0,
+                                onPressed: (){},
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Text("Nov"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                minWidth: 5.0,
+                                onPressed: (){},
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Text("Dic"),
                                       SizedBox(height: 10.0,),
                                       Icon(Icons.visibility)
                                     ],

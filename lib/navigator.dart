@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pueblos_magicos/navbar/history.dart';
 import 'navbar/events.dart';
 import 'navbar/hotels.dart';
 import 'navbar/restaurants.dart';
@@ -13,18 +14,18 @@ class NavigationBar extends StatefulWidget {
 class _NavigationBarState extends State<NavigationBar> {
   int pageIndex= 0;
 
-  final FirstScreen _firstScreen = FirstScreen();
+  final HistoryScrren _historyScrren = HistoryScrren();
   final RestaurantsScreen _restaurantsScreen = RestaurantsScreen();
   final HotelsScreen _hotelsScreen = HotelsScreen();
   final EventsScreen _eventsScreen = EventsScreen();
 
-  Widget _showPage = new FirstScreen();
+  Widget _showPage = new HistoryScrren();
 
   // ignore: missing_return
   Widget _pageChooser(int page){
     switch(page){
       case 0:
-        return _firstScreen;
+        return _historyScrren;
         break;
       case 1:
         return _restaurantsScreen;
