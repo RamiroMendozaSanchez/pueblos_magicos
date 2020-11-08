@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MonthListState extends StatelessWidget {
@@ -7,6 +8,8 @@ class MonthListState extends StatelessWidget {
 
   Widget updateIndicators(){
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+
     );
   }
 
