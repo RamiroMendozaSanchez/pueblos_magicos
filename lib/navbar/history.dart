@@ -135,7 +135,7 @@ class _FirstScreenState extends State<FirstScreen> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => EventsScreen()),
+                              MaterialPageRoute(builder: (context) => NavigationBar()),
                             );
                           },
                         ),

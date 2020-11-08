@@ -17,7 +17,7 @@ class _EventsScreenState extends State<EventsScreen> {
               Padding(
                 padding: EdgeInsets.only(top: 0.0),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * .4,
+                  height: MediaQuery.of(context).size.height * .5,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(50.0),
