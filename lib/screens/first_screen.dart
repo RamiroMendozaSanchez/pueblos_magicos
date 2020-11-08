@@ -2,8 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:pueblos_magicos/navbar/events.dart';
-import 'package:pueblos_magicos/navbar/restaurants.dart';
-import 'package:pueblos_magicos/navigator.dart';
 import 'package:pueblos_magicos/screens/second_screen.dart';
 
 class FirstScreen extends StatefulWidget {
