@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../resources/constants.dart';
 
@@ -66,10 +67,10 @@ class _EventsScreenState extends State<EventsScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 30, top: 310, right: 30.0 ),
+                padding: EdgeInsets.only(left: 30, top: 290, right: 30.0 ),
                 child: Container(
                   width: 450.0,
-                  height: 100.0,
+                  height: 80.0,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20.0),
@@ -77,7 +78,95 @@ class _EventsScreenState extends State<EventsScreen> {
                         BoxShadow( color: kShadowColor, offset: Offset(0, 4), blurRadius: 16)
                       ]
                   ),
-                  padding: EdgeInsets.all(12.0),
+                  padding: EdgeInsets.only(top: 12.0),
+                  child: Row(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                onPressed: (){},
+                                child: Container(
+                                    //width: 35.0,
+                                    child: Column(
+                                      children: [
+                                        Text("Ene"),
+                                        SizedBox(height: 10.0,),
+                                        Icon(Icons.visibility)
+                                      ],
+                                    ),
+                                  ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                onPressed: (){},
+                                child: Container(
+                                  //width: 35.0,
+                                  child: Column(
+                                    children: [
+                                      Text("Ene"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                onPressed: (){},
+                                child: Container(
+                                  //width: 35.0,
+                                  child: Column(
+                                    children: [
+                                      Text("Ene"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              FlatButton(
+                                onPressed: (){},
+                                child: Container(
+                                  //width: 35.0,
+                                  child: Column(
+                                    children: [
+                                      Text("Ene"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],

@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:pueblos_magicos/navbar/events.dart';
+import 'package:pueblos_magicos/navbar/restaurants.dart';
+import 'package:pueblos_magicos/navigator.dart';
 import 'package:pueblos_magicos/screens/second_screen.dart';
 
 class FirstScreen extends StatefulWidget {
@@ -131,10 +133,6 @@ class _FirstScreenState extends State<FirstScreen> {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => EventsScreen()),
-                            );
                           },
                         ),
                       ),
