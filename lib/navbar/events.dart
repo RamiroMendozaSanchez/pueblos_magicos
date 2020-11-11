@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pueblos_magicos/lists/event_list.dart';
 import '../resources/constants.dart';
 
 class EventsScreen extends StatefulWidget {
@@ -15,70 +16,92 @@ class _EventsScreenState extends State<EventsScreen> {
         children: [
           Stack(
             children: [
-              Padding(
-                padding: EdgeInsets.only(top: 0.0),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * .4,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(50.0),
-                        bottomRight: Radius.circular(50.0)
-                    ),
-                    color: cAppBarEventos,
-                  ),
-                  constraints: BoxConstraints(
-                    maxWidth: MediaQuery.of(context).size.width,
-                    maxHeight: 400,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                          padding: EdgeInsets.only(
-                              top: 30.0,
-                              left: 30.0,
-                              right: 30.0
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Eventos", style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 50.0
-                              ),),
-                              Text("Anuales", style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 50.0
-                              ),),
-                              SizedBox(height: 10.0,),
-                              Text("Busca por mes los eventos y festividades que se llevan a cabo sólo en Tlalpujahua", style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20.0
-                              ),),
-                              SizedBox(height: 30.0,),
-                              Text("Selecciona un mes", style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20.0
-                              ),)
-                            ],
-                          )
-                      )
-                    ],
-                  ),
+              encabezado(),
+              scroll()
+            ],
+          ),
+          EventList()
+        ],
+      ),
+    );
+  }
+
+
+  Widget encabezado(){
+    return Padding(
+      padding: EdgeInsets.only(top: 0.0),
+      child: Container(
+        height: MediaQuery.of(context).size.height * .4,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(50.0),
+              bottomRight: Radius.circular(50.0)
+          ),
+          color: cAppBarEventos,
+        ),
+        constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width,
+          maxHeight: 400,
+        ),
+        child: Column(
+          children: [
+            Padding(
+                padding: EdgeInsets.only(
+                    top: 30.0,
+                    left: 30.0,
+                    right: 30.0
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 30, top: 290, right: 30.0 ),
-                child: Container(
-                  width: 480.0,
-                  height: 80.0,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20.0),
-                      boxShadow: [
-                        BoxShadow( color: kShadowColor, offset: Offset(0, 4), blurRadius: 16)
-                      ]
-                  ),
-                  padding: EdgeInsets.only(top: 12.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Eventos", style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 50.0
+                    ),),
+                    Text("Anuales", style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 50.0
+                    ),),
+                    SizedBox(height: 10.0,),
+                    Text("Busca por mes los eventos y festividades que se llevan a cabo sólo en Tlalpujahua", style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0
+                    ),),
+                    SizedBox(height: 30.0,),
+                    Text("Selecciona un mes", style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0
+                    ),)
+                  ],
+                )
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget scroll(){
+    return Padding(
+      padding: EdgeInsets.only(left: 30, top: 290, right: 30.0 ),
+      child: Container(
+        width: 480.0,
+        height: 80.0,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20.0),
+            boxShadow: [
+              BoxShadow( color: kShadowColor, offset: Offset(0, 4), blurRadius: 16)
+            ]
+        ),
+        padding: EdgeInsets.only(top: 12.0),
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          child: Container(
+            child: Row(
+              children: [
+                Container(
                   child: Row(
                     children: [
                       Row(
@@ -89,15 +112,15 @@ class _EventsScreenState extends State<EventsScreen> {
                                 minWidth: 5.0,
                                 onPressed: (){},
                                 child: Container(
-                                    //width: 35.0,
-                                    child: Column(
-                                      children: [
-                                        Text("Ene"),
-                                        SizedBox(height: 10.0,),
-                                        Icon(Icons.visibility)
-                                      ],
-                                    ),
+                                  //width: 35.0,
+                                  child: Column(
+                                    children: [
+                                      Text("Ene"),
+                                      SizedBox(height: 10.0,),
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
+                                    ],
                                   ),
+                                ),
                               ),
                             ],
                           )
@@ -115,7 +138,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Feb"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -136,7 +159,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Mar"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -157,7 +180,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Abr"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -179,7 +202,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("May"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -200,7 +223,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Jun"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -221,7 +244,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Jul"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -242,7 +265,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Ago"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -264,7 +287,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Sep"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -285,7 +308,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Oct"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -306,7 +329,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Nov"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -327,7 +350,7 @@ class _EventsScreenState extends State<EventsScreen> {
                                     children: [
                                       Text("Dic"),
                                       SizedBox(height: 10.0,),
-                                      Icon(Icons.visibility)
+                                      Icon(Icons.visibility, color: cIconsViewNotSelectedEventos)
                                     ],
                                   ),
                                 ),
@@ -339,12 +362,14 @@ class _EventsScreenState extends State<EventsScreen> {
                     ],
                   ),
                 ),
-              )
-            ],
+              ],
+            ),
           ),
-        ],
+        ),
       ),
     );
   }
 
 }
+
+
