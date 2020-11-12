@@ -5,8 +5,8 @@ class EventList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //height: MediaQuery.of(context).size.height * 5,
-      height: 320.0,
+      height: MediaQuery.of(context).size.height * .3,
+      //height: 320.0,
       child: ListView.builder(
         scrollDirection: Axis.vertical,
         itemCount: 1,

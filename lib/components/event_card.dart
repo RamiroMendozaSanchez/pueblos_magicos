@@ -30,7 +30,7 @@ class EventCard extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text("Dia de la raza",
@@ -65,7 +65,7 @@ class EventCard extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Icon(Icons.local_activity, color: cAppBarEventos),
+                          Icon(Icons.near_me, color: cAppBarEventos),
                           Text("Plaza rayon", style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 13.0,
@@ -80,16 +80,22 @@ class EventCard extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    FlatButton(
-                        onPressed: (){},
-                        child: Text(
-                          "Agregar a mi calendario",
-                          style: TextStyle(fontSize: 10.0),
+                    Container(
+                      width: MediaQuery.of(context).size.width * .30,
+                      child: Padding(
+                        padding: EdgeInsets.only(right:20.0),
+                        child: FlatButton(
+                            onPressed: (){},
+                            child: Text(
+                              "Agregar a mi calendario",
+                              style: TextStyle(fontSize: 11.0),
+                            ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          color: cAppBarEventos,
                         ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
                       ),
-                      color: cAppBarEventos,
                     )
                   ],
                 )

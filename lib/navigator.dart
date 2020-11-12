@@ -54,7 +54,7 @@ class _NavigationBarState extends State<NavigationBar> {
               label: "Restaurant"
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.hotel, color: cAssentInHoteles,),
+              icon: Icon(Icons.apartment, color: cAssentInHoteles,),
               label: "Hoteles"
           ),
           BottomNavigationBarItem(
