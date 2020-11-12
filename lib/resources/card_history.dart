@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:pueblos_magicos/screens/continueView.dart';
 
 import 'constants.dart';
 
@@ -80,7 +81,12 @@ class CardHistory extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ContinueView()),
+                        );
+                      },
                     ),
                   ),
                 ],
