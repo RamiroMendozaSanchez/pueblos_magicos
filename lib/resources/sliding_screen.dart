@@ -1,60 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pueblos_magicos/resources/constants.dart';
-import 'package:sliding_up_panel/sliding_up_panel.dart';
+import 'package:pueblos_magicos/resources/panel_slider_up.dart';
 
 class SlidingScreen extends StatelessWidget {
-  final String name;
-
-  const SlidingScreen({Key key, this.name});
-
   @override
   Widget build(BuildContext context) {
-    return SlidingUpPanel(
-      defaultPanelState: PanelState.OPEN,
-      backdropEnabled: true,
-      borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(34.0),
-        topRight: Radius.circular(34.0),
-      ),
-      color: cBackgroudApp,
-      boxShadow: [
-        BoxShadow(color: kShadowColor, offset: Offset(0, -12), blurRadius: 32.0)
-      ],
-      minHeight: MediaQuery.of(context).size.height * 0.10,
-      maxHeight: MediaQuery.of(context).size.height * 0.80,
-      panel: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Center(
-            child: Padding(
-              padding: EdgeInsets.only(top: 12.0, bottom: 16.0),
-              child: Container(
-                width: 60.0,
-                height: 3.0,
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(2.0),
-                ),
-              ),
-            ),
+    return DraggableScrollableSheet(
+      initialChildSize: 0.4,
+      minChildSize: 0.2,
+      maxChildSize: 0.6,
+      builder: (context,controller){
+        return Container(
+          decoration: BoxDecoration(
+            color: cBackgroudApp,
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
           ),
-          Flex(
-            direction: Axis.horizontal,
-
-            children: [
-              Expanded(
-                child: Container(
+          child: SingleChildScrollView(
+            controller: controller,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height,
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 20.0),
+                        padding: EdgeInsets.only(left: 20.0, top: 30),
                         child: Container(
                           width: MediaQuery.of(context).size.width,
                           child: Text(
-                            name,
+                            "Iglesia del Carmen",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 30,
@@ -87,39 +64,30 @@ class SlidingScreen extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.1,
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.008,
+                                      width:
+                                      MediaQuery.of(context).size.width * 0.1,
+                                      height: MediaQuery.of(context).size.height *
+                                          0.008,
                                       decoration: BoxDecoration(
                                         color: Colors.greenAccent,
-                                        borderRadius:
-                                            BorderRadius.circular(2.0),
                                       ),
                                     ),
                                     Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.1,
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.008,
+                                      width:
+                                      MediaQuery.of(context).size.width * 0.1,
+                                      height: MediaQuery.of(context).size.height *
+                                          0.008,
                                       decoration: BoxDecoration(
                                         color: Colors.amberAccent,
-                                        borderRadius:
-                                            BorderRadius.circular(2.0),
                                       ),
                                     ),
                                     Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.1,
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.008,
+                                      width:
+                                      MediaQuery.of(context).size.width * 0.1,
+                                      height: MediaQuery.of(context).size.height *
+                                          0.008,
                                       decoration: BoxDecoration(
                                         color: Colors.redAccent,
-                                        borderRadius:
-                                            BorderRadius.circular(2.0),
                                       ),
                                     ),
                                   ],
@@ -150,16 +118,14 @@ class SlidingScreen extends StatelessWidget {
                           child: Row(
                             children: [
                               Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.05,
+                                height: MediaQuery.of(context).size.height * 0.05,
                                 width: MediaQuery.of(context).size.width * 0.4,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
                                     color: cAssentRestorantsAndButtonVideo,
                                     boxShadow: [
                                       BoxShadow(
-                                        color:
-                                            Colors.pinkAccent.withOpacity(0.5),
+                                        color: Colors.pinkAccent.withOpacity(0.5),
                                         spreadRadius: 2,
                                         blurRadius: 10,
                                         offset: Offset(0, 3),
@@ -190,16 +156,14 @@ class SlidingScreen extends StatelessWidget {
                               ),
                               Spacer(),
                               Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.05,
+                                height: MediaQuery.of(context).size.height * 0.05,
                                 width: MediaQuery.of(context).size.width * 0.4,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
                                     color: cAssentHistory,
                                     boxShadow: [
                                       BoxShadow(
-                                        color:
-                                            Colors.redAccent.withOpacity(0.5),
+                                        color: Colors.redAccent.withOpacity(0.5),
                                         spreadRadius: 2,
                                         blurRadius: 10,
                                         offset: Offset(0, 3),
@@ -217,7 +181,7 @@ class SlidingScreen extends StatelessWidget {
                                         width: 10.0,
                                       ),
                                       Text(
-                                        "Visualizar Vídeo",
+                                        "Escuchar Historia",
                                         style: TextStyle(
                                           color: cBackgroudApp,
                                           fontSize: 12,
@@ -232,18 +196,15 @@ class SlidingScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.07),
+                      SizedBox(height: MediaQuery.of(context).size.height * 0.07),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: 1.0,
                         decoration: BoxDecoration(
                           color: Colors.black12,
-                          borderRadius: BorderRadius.circular(2.0),
                         ),
                       ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.06),
+                      SizedBox(height: MediaQuery.of(context).size.height * 0.06),
                       Padding(
                         padding: EdgeInsets.only(left: 20, right: 20),
                         child: Container(
@@ -251,23 +212,38 @@ class SlidingScreen extends StatelessWidget {
                             children: [
                               Text(
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-                                "sed do eiusmod tempor incididunt ut labore et dolore"
-                                "magna aliqua."
-                                "Ut enim ad minim veniam, quis nostrud exercitation ullamco"
-                                "laboris nisi ut aliquip ex ea commodo consequat."
-                                "Duis aute irure dolor in reprehenderit in voluptate velit esse"
-                                "cillum dolore eu fugiat nulla pariatur."
-                                "Excepteur sint occaecat cupidatat non proident, sunt in"
-                                "culpa qui officia deserunt mollit anim id est laborum."
-                                "Sed ut perspiciatis unde omnis iste natus error sit"
-                                "voluptatem accusantium doloremque laudantium, totam"
-                                "rem aperiam, eaque ipsa quae ab illo inventore veritatis et"
-                                "quasi architecto beatae vitae dicta sunt explicabo.",
+                                    "sed do eiusmod tempor incididunt ut labore et dolore"
+                                    "magna aliqua."
+                                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+                                    "laboris nisi ut aliquip ex ea commodo consequat."
+                                    "Duis aute irure dolor in reprehenderit in voluptate velit esse"
+                                    "cillum dolore eu fugiat nulla pariatur."
+                                    "Excepteur sint occaecat cupidatat non proident, sunt in"
+                                    "culpa qui officia deserunt mollit anim id est laborum."
+                                    "Sed ut perspiciatis unde omnis iste natus error sit"
+                                    "voluptatem accusantium doloremque laudantium, totam"
+                                    "rem aperiam, eaque ipsa quae ab illo inventore veritatis et"
+                                    "quasi architecto beatae vitae dicta sunt explicabo."
+                                    "Sed ut perspiciatis unde omnis iste natus error sit"
+                                    "voluptatem accusantium doloremque laudantium, totam"
+                                    "rem aperiam, eaque ipsa quae ab illo inventore veritatis et"
+                                    "quasi architecto beatae vitae dicta sunt explicabo."
+                                    "Sed ut perspiciatis unde omnis iste natus error sit"
+                                    "voluptatem accusantium doloremque laudantium, totam"
+                                    "rem aperiam, eaque ipsa quae ab illo inventore veritatis et"
+                                    "quasi architecto beatae vitae dicta sunt explicabo."
+                                ,
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   fontSize: 16,
                                 ),
                               ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 20, right: 20),
+                                child: Container(
+                                  child: Image.asset("assets/images/lugares.jpg"),
+                                ),
+                              )
                             ],
                           ),
                         ),
@@ -275,12 +251,39 @@ class SlidingScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ],
-      ),
+        );
+      },
     );
-    ;
   }
+}
+
+Widget panel() {
+  return PanelSliding(
+    name: "Iglesia del Carmen",
+    descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "sed do eiusmod tempor incididunt ut labore et dolore"
+        "magna aliqua."
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+        "laboris nisi ut aliquip ex ea commodo consequat."
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse"
+        "cillum dolore eu fugiat nulla pariatur."
+        "Excepteur sint occaecat cupidatat non proident, sunt in"
+        "culpa qui officia deserunt mollit anim id est laborum."
+        "Sed ut perspiciatis unde omnis iste natus error sit"
+        "voluptatem accusantium doloremque laudantium, totam"
+        "rem aperiam, eaque ipsa quae ab illo inventore veritatis et"
+        "quasi architecto beatae vitae dicta sunt explicabo."
+        "Sed ut perspiciatis unde omnis iste natus error sit"
+        "voluptatem accusantium doloremque laudantium, totam"
+        "rem aperiam, eaque ipsa quae ab illo inventore veritatis et"
+        "quasi architecto beatae vitae dicta sunt explicabo."
+        "Sed ut perspiciatis unde omnis iste natus error sit"
+        "voluptatem accusantium doloremque laudantium, totam"
+        "rem aperiam, eaque ipsa quae ab illo inventore veritatis et"
+        "quasi architecto beatae vitae dicta sunt explicabo.",
+    imagen: "assets/images/lugares.jpg",
+  );
 }

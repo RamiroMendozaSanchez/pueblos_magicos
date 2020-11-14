@@ -22,8 +22,9 @@ class ContinueView extends StatelessWidget {
               ),
             ),
           ),
+          SlidingScreen(),
           Padding(
-            padding: const EdgeInsets.only(top: 40.0, right: 20.0),
+            padding: EdgeInsets.only(top: 40.0, right: 20.0),
             child: Align(
               alignment: Alignment.topRight,
               child: ClipRRect(
@@ -54,14 +55,8 @@ class ContinueView extends StatelessWidget {
               ),
             ),
           ),
-          sliding(),
         ],
       ),
     );
   }
-}
-Widget sliding(){
-  return SlidingScreen(
-    name: "Puente Magico",
-  );
 }
