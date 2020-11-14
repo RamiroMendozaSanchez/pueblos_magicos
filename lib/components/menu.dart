@@ -8,37 +8,24 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 5.0,),
+    return Align(
+      alignment: Alignment.center,
       child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Row(
-              children: [
-                Container(
-                  width: 300,
-                  height: 300,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(41.0),
-                      boxShadow: [
-                        BoxShadow(
-                            color: kShadowColor,
-                            offset:  Offset(0, 20),
-                            blurRadius: 30.0
-                        )
-                      ],
-                      image: DecorationImage(
-                        image: AssetImage(img),
-                        fit: BoxFit.cover,
-                      )
-                  ),
-                ),
-              ],
+        width: 300,
+        height: 300,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(41.0),
+            boxShadow: [
+              BoxShadow(
+                  color: kShadowColor,
+                  offset:  Offset(0, 20),
+                  blurRadius: 30.0
+              )
+            ],
+            image: DecorationImage(
+              image: AssetImage(img),
+              fit: BoxFit.cover,
             )
-          ],
         ),
       ),
     );

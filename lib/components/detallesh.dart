@@ -13,19 +13,28 @@ class DetallesH extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: cBackgroudApp,
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            info(),
-            ScrollHyRList(),
-            ubicacion(),
-            DescripcionHyR(),
-            SizedBox(height: 10.0,),
-            Text("Revisa nuestras habitaciones", style: TextStyle(fontSize: 30.0, color: cTitlesAndText),),
-            Catalogo(),
-            BotonLlegada(color: cAssentInHoteles,)
-          ],
+      child: SafeArea(
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                info(),
+                ScrollHyRList(),
+                ubicacion(),
+                DescripcionHyR(),
+                SizedBox(height: 10.0,),
+                Padding(
+                  padding: EdgeInsets.only(left: 20.0, right: 20.0),
+                  child: Text("Revisa nuestras habitaciones", style: TextStyle(fontSize: 25.0, color: cTitlesAndText),),
+                ),
+                Catalogo(),
+                BotonLlegada(color: cAssentInHoteles,)
+              ],
+            ),
+          ),
         ),
       ),
     );

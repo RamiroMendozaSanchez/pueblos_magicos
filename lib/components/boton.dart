@@ -11,11 +11,12 @@ class BotonLlegada extends StatelessWidget {
       child: FlatButton(
         onPressed: (){},
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.location_on, size: 20, color: Colors.white,),
+            Icon(Icons.location_on, size: 15, color: Colors.white,),
             Text(
               "Ver direccion de llegada",
-              style: TextStyle(fontSize: 20.0, color: Colors.white),
+              style: TextStyle(fontSize: 15.0, color: Colors.white),
               textAlign: TextAlign.center,
             ),
           ],
