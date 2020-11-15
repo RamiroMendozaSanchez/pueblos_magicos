@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pueblos_magicos/components/scroll_hyr.dart';
 
-class ScrollHyRList extends StatelessWidget {
+class ScrollRList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -28,7 +28,7 @@ class ScrollHyRList extends StatelessWidget {
 
 Widget scroll(){
   return ScrollHyR(
-    img: "assets/images/habitacion.jpg",
+    img: "assets/images/restaurant.jpg",
   );
 }
 

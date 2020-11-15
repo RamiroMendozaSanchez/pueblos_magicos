@@ -13,7 +13,7 @@ class UbicacionCardHyR extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.11,
+      height: MediaQuery.of(context).size.height * 0.12,
       child: Column(
         children: [
           Padding(
@@ -32,7 +32,7 @@ class UbicacionCardHyR extends StatelessWidget {
           SizedBox(height: 5.0,),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 3.0,
+            height: MediaQuery.of(context).size.height * 0.002,
             decoration: BoxDecoration(
                 color: Colors.grey.shade300
             ),
@@ -46,7 +46,7 @@ class UbicacionCardHyR extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 10.0),
                   child: Container(
-                    width: MediaQuery.of(context).size.width * 0.35,
+                    width: MediaQuery.of(context).size.width * 0.38,
                     height: MediaQuery.of(context).size.height,
                     child: Row(
                       children: [
@@ -58,8 +58,8 @@ class UbicacionCardHyR extends StatelessWidget {
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.01),
                 Container(
-                  width: 3.0,
-                  height: 15.0,
+                  width: MediaQuery.of(context).size.width *0.002,
+                  height: MediaQuery.of(context).size.height * 0.15,
                   decoration:  BoxDecoration(
                       color: Colors.grey.shade300
                   ),
@@ -68,7 +68,7 @@ class UbicacionCardHyR extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(right: 10.0),
                   child: Container(
-                    width: MediaQuery.of(context).size.width * 0.5,
+                    width: MediaQuery.of(context).size.width * 0.52,
                     height: MediaQuery.of(context).size.height,
                     child: Row(
                       children: [
@@ -87,7 +87,7 @@ class UbicacionCardHyR extends StatelessWidget {
           SizedBox(height: 5.0,),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 3.0,
+            height: MediaQuery.of(context).size.height * 0.002,
             decoration: BoxDecoration(
                 color: Colors.grey.shade300
             ),

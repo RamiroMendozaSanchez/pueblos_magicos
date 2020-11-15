@@ -8,9 +8,11 @@ class InfoHyR extends StatelessWidget {
   final String tipo2;
   final String concurrencia;
   final Color color;
+  final MaterialPageRoute ruta;
+
 
   const InfoHyR({this.nombre, this.lugar,this.tipo,this.tipo2,
-    this.concurrencia, this.color});
+    this.concurrencia, this.color, this.ruta});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,11 @@ class InfoHyR extends StatelessWidget {
                   Spacer(),
                   FloatingActionButton(
                     child: Icon(Icons.clear, color: Colors.white,),
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(
+                          context, ruta
+                      );
+                    },
                     backgroundColor: color,
                     elevation: 20.0,
                     shape: RoundedRectangleBorder(

@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:pueblos_magicos/components/Catmenu.dart';
 import 'package:pueblos_magicos/components/menu.dart';
 import 'package:pueblos_magicos/components/ubicacion_hyr.dart';
-import 'package:pueblos_magicos/lists/scrollhyr_list.dart';
+import 'package:pueblos_magicos/lists/scrollh_list.dart';
+import 'package:pueblos_magicos/lists/scrollr_list.dart';
+import 'package:pueblos_magicos/navbar/restaurants.dart';
 import 'package:pueblos_magicos/resources/constants.dart';
 
+import '../navigator.dart';
 import 'boton.dart';
 import 'descripctioHyR.dart';
 import 'info_HyR.dart';
@@ -26,7 +29,7 @@ class DetallesR extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 info(),
-                ScrollHyRList(),
+                ScrollRList(),
                 ubicacion(),
                 DescripcionHyR(),
                 SizedBox(height: 10.0,),
@@ -52,7 +55,8 @@ Widget info(){
       tipo: "Cafetería",
       tipo2: "Snack",
       concurrencia: "Media",
-      color: cAssentRestorantsAndButtonVideo
+      color: cAssentRestorantsAndButtonVideo,
+      ruta: MaterialPageRoute(builder: (context) => NavigationBar()),
   );
 }
 

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pueblos_magicos/components/boton.dart';
 import 'package:pueblos_magicos/components/ubicacion_hyr.dart';
 import 'package:pueblos_magicos/lists/scrollCatalaogo.dart';
-import 'package:pueblos_magicos/lists/scrollhyr_list.dart';
+import 'package:pueblos_magicos/lists/scrollh_list.dart';
+import 'package:pueblos_magicos/navbar/hotels.dart';
+import 'package:pueblos_magicos/navigator.dart';
 import 'package:pueblos_magicos/resources/constants.dart';
 
 import 'descripctioHyR.dart';
@@ -22,7 +24,7 @@ class DetallesH extends StatelessWidget {
             child: Column(
               children: [
                 info(),
-                ScrollHyRList(),
+                ScrollHList(),
                 ubicacion(),
                 DescripcionHyR(),
                 SizedBox(height: 10.0,),
@@ -48,7 +50,8 @@ Widget info(){
     tipo: "Habitaciones",
     tipo2: "Restaurant",
     concurrencia: "Media",
-    color: cAssentInHoteles
+    color: cAssentInHoteles,
+    ruta: MaterialPageRoute(builder: (context) => NavigationBar()),
   );
 }
 
