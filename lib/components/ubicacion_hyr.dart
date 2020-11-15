@@ -13,18 +13,18 @@ class UbicacionCardHyR extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.1,
+      height: MediaQuery.of(context).size.height * 0.11,
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
+            padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0),
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.03,
               child: Row(
                 children: [
                   Icon(Icons.location_on, color: color, size: 17.0,),
-                  Text(ubicacion, style: TextStyle(fontSize: 16.0, color: cTitlesAndText),),
+                  Text(ubicacion, style: TextStyle(fontSize: 15.0, color: cTitlesAndText),),
                 ],
               ),
             ),
@@ -74,7 +74,7 @@ class UbicacionCardHyR extends StatelessWidget {
                       children: [
                         Icon(Icons.access_time, color: color, size: 15.0,),
                         Text("Abierto", style: TextStyle(fontSize: 15.0, color: Color.fromRGBO(85, 239, 196, 1)),),
-                        SizedBox(width: MediaQuery.of(context).size.width * 0.03),
+                        SizedBox(width: MediaQuery.of(context).size.width * 0.01),
                         Icon(Icons.circle, color: color, size: 10.0,),
                         Text("Cierra: "+cierre, style: TextStyle(fontSize: 15.0, color: cTitlesAndText,)),
                       ],
