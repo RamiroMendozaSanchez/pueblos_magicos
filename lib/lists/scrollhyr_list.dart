@@ -28,7 +28,7 @@ class ScrollHyRList extends StatelessWidget {
 
 Widget scroll(){
   return ScrollHyR(
-    img: "assets/images/hoteles.jpg",
+    img: "assets/images/habitacion.jpg",
   );
 }
 
