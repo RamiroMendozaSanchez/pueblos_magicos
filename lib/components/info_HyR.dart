@@ -35,9 +35,9 @@ class InfoHyR extends StatelessWidget {
                     child: Icon(Icons.clear, color: Colors.white,),
                     onPressed: (){},
                     backgroundColor: color,
-                    elevation: 50.0,
+                    elevation: 20.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50.0)
+                        borderRadius: BorderRadius.circular(30.0)
                     ),
                   )
                 ],

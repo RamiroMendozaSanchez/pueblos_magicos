@@ -28,7 +28,7 @@ class Catalogo extends StatelessWidget {
 
 Widget scroll(){
   return Catalago(
-    img: "assets/images/hoteles.jpg",
+    img: "assets/images/habitacion.jpg",
   );
 }
 
