@@ -18,8 +18,8 @@ class TCardsHyR extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Container(
-            width: 180,
-            height: 180,
+            width: MediaQuery.of(context).size.width * 0.44,
+            height: MediaQuery.of(context).size.height * 0.23,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               color: color,
@@ -56,31 +56,35 @@ class TCardsHyR extends StatelessWidget {
             ),
           ),
           Container(
-            width: 180,
-            height: 160,
+            width: MediaQuery.of(context).size.width * 0.44,
+            height: MediaQuery.of(context).size.height * 0.20,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20) ),
               color: Colors.white,
             ),
             child: Padding(
-              padding: const EdgeInsets.only(top: 125 ),
+              padding: const EdgeInsets.only(top: 125, left: 3 ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(nombre, style: TextStyle(color: cTitlesAndText, fontWeight: FontWeight.bold, fontSize: 15.0),),
-                  Row(
-                    children: [
-                      Text(catpre, style: TextStyle(color: cTitlesAndText, fontSize: 10.0),),
-                      SizedBox(width: 50.0,),
-                      Icon(icon, size: 10.0,)
-                    ],
+                  Container(
+                    width: MediaQuery.of(context).size.width ,
+                    child: Row(
+                      children: [
+                        Text(catpre, style: TextStyle(color: cTitlesAndText, fontSize: 9.0),),
+                        SizedBox(width: MediaQuery.of(context).size.width * 0.005,),
+                        Icon(icon, size: 10.0,)
+                      ],
+                    ),
                   )
                 ],
               ),
             ),
           ),
           Container(
-            width: 180,
-            height: 120,
+            width: MediaQuery.of(context).size.width * 0.44,
+            height: MediaQuery.of(context).size.height * 0.15,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
               image: DecorationImage(

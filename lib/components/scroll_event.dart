@@ -33,7 +33,9 @@ class Scroll extends StatelessWidget {
                               FlatButton(
                                 minWidth: 5.0,
                                 onPressed: (){},
-                                focusColor: cObjectsSelectedAndTextInCardBlueEventos,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30)
+                                ),
                                 child: Container(
                                   //width: 35.0,
                                   child: Column(
@@ -293,3 +295,5 @@ class Scroll extends StatelessWidget {
     );
   }
 }
+
+

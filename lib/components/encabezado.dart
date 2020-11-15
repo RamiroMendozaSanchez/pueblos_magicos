@@ -24,18 +24,19 @@ class Encabezado extends StatelessWidget {
         ),
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width,
-          maxHeight: 300,
+          maxHeight: MediaQuery.of(context).size.height * 0.4,
         ),
         child: Column(
           children: [
             Padding(
                 padding: EdgeInsets.only(
-                    top: 30.0,
-                    left: 30.0,
-                    right: 30.0
+                    top: 40.0,
+                    left: 10.0,
+                    right: 10.0
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(etiqueta1, style: TextStyle(
                         color: Colors.white,

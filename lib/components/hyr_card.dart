@@ -20,25 +20,29 @@ class CardHR extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(30),
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.9,
-              height: MediaQuery.of(context).size.height * 0.3,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    img,
+            child: Padding(
+              padding: EdgeInsets.only(top: 210.0),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.4,
+                height: MediaQuery.of(context).size.height * 0.25,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  image: DecorationImage(
+                    image: AssetImage(
+                      img,
+                    ),
+                    fit: BoxFit.cover,
                   ),
-                  fit: BoxFit.cover,
+                  color: Colors.grey.shade500.withOpacity(0.3),
                 ),
-                color: Colors.grey.shade500.withOpacity(0.3),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20.0),
+            padding: const EdgeInsets.only(left: 20.0, top: 230.0),
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.3,
-              width: MediaQuery.of(context).size.width * 0.5,
+              height: MediaQuery.of(context).size.height * 0.25,
+              width: MediaQuery.of(context).size.width * 0.3,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -65,22 +69,27 @@ class CardHR extends StatelessWidget {
                     width: 114,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: cAssentHistory,
+                      color: Colors.grey.shade500.withOpacity(0.5),
                     ),
-                    child: RawMaterialButton(
-                      child: Text(
-                        "Conoce más",
-                        style: TextStyle(
-                          color: cBackgroudApp,
-                          fontSize: 12,
+                    child: Row(
+                      children: [
+                        RawMaterialButton(
+                          child: Text(
+                            "Conoce más",
+                            style: TextStyle(
+                              color: cBackgroudApp,
+                              fontSize: 12,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              ruta
+                            );
+                          },
                         ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          ruta
-                        );
-                      },
+                        Icon(Icons.arrow_forward_ios, size: 10, color: cBackgroudApp,)
+                      ],
                     ),
                   ),
                 ],

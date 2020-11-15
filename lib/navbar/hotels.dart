@@ -25,8 +25,11 @@ class _HotelsScreenState extends State<HotelsScreen> {
                 scrollPopu()
               ],
             ),
-            SizedBox(height: 10.0,),
-            Text("Todos los hoteles", style: TextStyle(fontSize: 30.0, color: cTitlesAndText),),
+            //SizedBox(height: 10.0,),
+            Padding(
+              padding: EdgeInsets.only(left: 20.0, right: 20.0),
+              child: Text("Todos los hoteles", style: TextStyle(fontSize: 30.0, color: cTitlesAndText),),
+            ),
             scrollTodo()
           ],
         ),
