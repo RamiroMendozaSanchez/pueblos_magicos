@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pueblos_magicos/navigator.dart';
 import 'package:pueblos_magicos/resources/constants.dart';
-import 'package:pueblos_magicos/resources/panel_slider_up.dart';
+import 'package:pueblos_magicos/resources/map.dart';
 
 class SlidingScreen extends StatelessWidget {
   @override
@@ -273,6 +273,34 @@ class SlidingScreen extends StatelessWidget {
                         SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                       ],
                     ),
+                  ),
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.05,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: cAssentHistory,
+                  ),
+                  child: RawMaterialButton(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.location_pin,color: Colors.white,),
+                        Text(
+                          "Ver Dirección de llegada",
+                          style: TextStyle(
+                            color: cBackgroudApp,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    onPressed: () {
+                     Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MapaView()),
+                      );
+                    },
                   ),
                 ),
               ],

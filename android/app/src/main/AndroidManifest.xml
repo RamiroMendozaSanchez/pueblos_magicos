@@ -9,6 +9,8 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="pueblos_magicos"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.mapbox.token" android:value="pk.eyJ1IjoicmFtaXJvbWVuZG96YWFycGFuIiwiYSI6ImNraGpwdzlteDBtbTcyeXA1Y2dnYm5ubzYifQ.Go3nCYLpfDOIijhedOaGDg"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

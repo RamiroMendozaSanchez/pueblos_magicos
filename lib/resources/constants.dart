@@ -14,6 +14,8 @@ const cAssentRestorantsAndButtonVideo = Color(0xFFE50080);
 const cSelectedMenuLugares = Color(0xFFF3AD88);
 const cAssentHistory = Color(0xFFE54E22);
 const kShadowColor = Color.fromRGBO(72, 76, 82, 0.16);
+const API_KEY = 'bXth0iMj7_5eLZbwcdL27Jd-6Jx6Eo9mW4suYeMWIXE';
+const ID_SPACES = '4mn7wrc3ysbs';
 
 
 
