@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pueblos_magicos/resources/canal.dart';
 import 'package:pueblos_magicos/screens/first_screen.dart';
 
 import 'screens/first_screen.dart';

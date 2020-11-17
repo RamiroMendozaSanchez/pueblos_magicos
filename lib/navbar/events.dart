@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pueblos_magicos/components/encabezado.dart';
 import 'package:pueblos_magicos/components/scroll_event.dart';
 import 'package:pueblos_magicos/lists/event_list.dart';
+import 'package:pueblos_magicos/resources/httpHandler.dart';
 import '../resources/constants.dart';
 
 class EventsScreen extends StatefulWidget {
@@ -11,6 +12,19 @@ class EventsScreen extends StatefulWidget {
 }
 
 class _EventsScreenState extends State<EventsScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _loadJson();
+  }
+
+  _loadJson() async{
+    String data = await HttpHandler().fetchLugares();
+    print(data);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(

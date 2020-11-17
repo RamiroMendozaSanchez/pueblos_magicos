@@ -24,7 +24,7 @@ class Encabezado extends StatelessWidget {
         ),
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width,
-          maxHeight: MediaQuery.of(context).size.height * 0.4,
+          maxHeight: MediaQuery.of(context).size.height * 0.45,
         ),
         child: Column(
           children: [
