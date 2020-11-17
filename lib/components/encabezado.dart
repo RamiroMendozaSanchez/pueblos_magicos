@@ -31,8 +31,8 @@ class Encabezado extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(
                     top: 40.0,
-                    left: 10.0,
-                    right: 10.0
+                    left: 20.0,
+                    right: 20.0
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
