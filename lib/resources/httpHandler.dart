@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class HttpHandler{
-  static final _httphandler = new HttpHandler();
+ /* static final _httphandler = new HttpHandler();
   final String _baseUrl = "https://cdn.contentful.com";
 
   static HttpHandler get(){
@@ -15,7 +15,7 @@ class HttpHandler{
     return json.decode(response.body);
   }
 
-  Future <List<Media>> fetchLugares ({String category : 'lugar'})
+  Future <List<Media>> fetchLugares ({String category : 'lugar'})*/
 }
 
 
