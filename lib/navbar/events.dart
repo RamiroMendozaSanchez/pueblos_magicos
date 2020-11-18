@@ -13,7 +13,7 @@ class EventsScreen extends StatefulWidget {
 
 class _EventsScreenState extends State<EventsScreen> {
 
-  /*@override
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -23,7 +23,7 @@ class _EventsScreenState extends State<EventsScreen> {
   _loadJson() async{
     String data = await HttpHandler().fetchLugares();
     print(data);
-  }*/
+  }
 
   @override
   Widget build(BuildContext context) {

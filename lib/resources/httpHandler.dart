@@ -5,7 +5,7 @@ import 'package:pueblos_magicos/resources/constants.dart';
 
 class HttpHandler{
 
-  /*static final _httphandler = new HttpHandler();
+  static final _httphandler = new HttpHandler();
   final String _baseUrl = "https://cdn.contentful.com";
 
   static HttpHandler get(){
@@ -17,7 +17,17 @@ class HttpHandler{
     return json.decode(response.body);
   }
 
-  Future <List<Media>> fetchLugares ({String category : 'lugar'})*/
+  Future<String> fetchLugares(){
+    var uri = new Uri.https(_baseUrl, "entries?content_type=lugar", {
+      'spaces': ID_SPACES,
+      'environments': "master",
+      'access_token': API_KEY
+    });
+
+    return getJson(uri).then(((data) => data.toString()));
+  }
+
+
 }
 
 
