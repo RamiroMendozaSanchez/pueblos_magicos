@@ -32,7 +32,6 @@ dependencies:
   google_maps_flutter: ^0.5.24+1
   permission_handler: ^5.0.1+1
   location: ^3.0.1
-  http: ^0.12.1
   path_provider: ^1.6.11
   flutter_speed_dial: ^1.2.5
   contentful_dart: ^0.0.5
