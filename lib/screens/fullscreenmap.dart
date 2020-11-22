@@ -76,7 +76,6 @@ class _FullScreenMapState extends State<FullScreenMap> {
       myLocationButtonEnabled = true;
       myLocationEnabled = true;
     });
-    dispose();
   }
 
   @override
