@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:pueblos_magicos/resources/constants.dart';
+import 'package:pueblos_magicos/model/media.dart';
 
 class HttpHandler{
 
@@ -17,14 +18,16 @@ class HttpHandler{
     return json.decode(response.body);
   }
 
-  Future<dynamic> fetchLugares() {
+  Future<List<Media>> fetchLugares() {
     var uri = new Uri.https(
       _baseUrl,
       '/spaces/4mn7wrc3ysbs/entries',
       {'access_token': ACCESS_TOKEN,'content_type': 'lugar','select':'fields.nombre,fields.descripcin,fields.fotoLugar,fields.video,fields.audio,fields.locacion'},
     );
     print(uri);
-    return getJson(uri).then(((data) => data.toString()));
+    return getJson(uri).then(((data) =>
+      data["results"].map<Media>((item) => new Media(item)).toList()
+    ));
   }
 
 

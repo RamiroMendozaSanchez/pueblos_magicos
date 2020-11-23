@@ -1,3 +1,4 @@
+import 'package:pueblos_magicos/resources/util.dart';
 class Media{
    int id;
    String name;
@@ -7,6 +8,8 @@ class Media{
    String audioLugar;
    double long;
    double lat;
+
+   String getPosterUrl() => getMediumPictureUrl(imagLugar);
 
    factory Media(Map jsonMap){
     return new Media.deserialize(jsonMap);
