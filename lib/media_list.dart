@@ -19,7 +19,7 @@ class _MediaListState extends State<MediaList> {
   void loadLugares() async{
     var lugar = await HttpHandler().fetchLugares();
     setState(() {
-      lugar.addAll(lugar);
+      _media.addAll(lugar);
     });
   }
   
